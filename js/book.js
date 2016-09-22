@@ -14,12 +14,8 @@ Book.prototype.create = function(author, bookname, success, error) {
 			function: "create"
 		},
 		dataType: "json",
-		succes: function(argument) {
-			console.log(argument);
-		},
-		error: function() {
-			console.log("error");
-		}
+		succes: successFn(data),
+		error: errorFn(data)
 
 	})
 };
@@ -100,12 +96,8 @@ Book.prototype.getList = function(success, error) {
 			function: "readbooks"
 		},
 		dataType: "json",
-		succes: function(argument) {
-			console.log(argument);
-		},
-		error: function() {
-			console.log("error");
-		}
+		succes: successFn(data),
+		error: errorFn(data)
 
 	})
 }

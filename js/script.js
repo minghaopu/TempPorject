@@ -25,6 +25,7 @@ $(document).ready(function(e) {
 
 	$("#getList").click(function(event) {
 		book.getList(function(data) {
+			cosnole.log(data)
 			var row = "<>"
 		});
 	});
