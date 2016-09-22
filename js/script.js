@@ -21,6 +21,8 @@ $(document).ready(function(e) {
 				book.getList(function(data) {
 					createList(data.list)
 				})
+				$("input#c_author").val('');
+				$("input#c_bookname").val('');
 			});
 	});
 
