@@ -14,8 +14,6 @@
 
 	function create ($author, $bookname) {
 		$success = true;
-
-
 		$au = addslashes($author);
 		$name = addslashes($bookname);
 
@@ -51,16 +49,16 @@
 		echo json_encode($success);
 
 	}
-	$param = json_decode(file_get_contents('php://input'));
+	$function = $_POST['function'];
 
 
-	switch ($param->function) {
+	switch ($function) {
 		case 'create':
-			create($param->author, $param->bookname);
+			create($_POST['author'], $_POST['bookname']);
 			break;
 		
 		case 'update':
-			update($param->id, $param->author, $param->bookname);
+			update($_POST['id'], $_POST['author'], $_POST['bookname']);
 			break;
 	}
 

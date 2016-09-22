@@ -7,9 +7,11 @@ div {
 p.header {
 	font-size: 20px;
 }
+
 p.label {
 	display: inline;
 }
+
 button {
 	display: block;
 	width: 100px;
@@ -17,6 +19,17 @@ button {
 	font-size: 20px;
 	margin: 5px;
 }
+
 input {
 	height: 20px;
+}
+
+div#list-content {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+div#list span {
+	width: 200px;
+	display: inline-block;
 }

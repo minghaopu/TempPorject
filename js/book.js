@@ -18,7 +18,6 @@ Book.prototype.create = function(author, bookname, success, error) {
 			successFn(arguments[0])
 		},
 		error: function() {
-			console.log(arguments);
 			errorFn(arguments)
 		}
 
@@ -40,7 +39,6 @@ Book.prototype.delete = function(id, success, error) {
 			successFn(arguments[0])
 		},
 		error: function() {
-			console.log(arguments);
 			errorFn(arguments)
 		}
 
@@ -63,14 +61,13 @@ Book.prototype.read = function(id, success, error) {
 			successFn(arguments[0])
 		},
 		error: function() {
-			console.log(arguments);
 			errorFn(arguments)
 		}
 
 	})
 };
 
-Book.prototype.update = function(author, bookname, id, success, error) {
+Book.prototype.update = function(id, author, bookname, success, error) {
 	var successFn = success || function() {};
 	var errorFn = error || function() {};
 	$.ajax({
@@ -87,7 +84,6 @@ Book.prototype.update = function(author, bookname, id, success, error) {
 			successFn(arguments[0])
 		},
 		error: function() {
-			console.log(arguments);
 			errorFn(arguments)
 		}
 
@@ -108,7 +104,6 @@ Book.prototype.getList = function(success, error) {
 			successFn(arguments[0])
 		},
 		error: function() {
-			console.log(arguments);
 			errorFn(arguments)
 		}
 
