@@ -96,8 +96,12 @@ Book.prototype.getList = function(success, error) {
 			function: "readbooks"
 		},
 		dataType: "json",
-		succes: successFn(data),
-		error: errorFn(data)
+		succes: function() {
+			successFn(arguments)
+		},
+		error: function() {
+			errorFn(arguments)
+		}
 
 	})
 }
