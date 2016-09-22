@@ -14,8 +14,13 @@ Book.prototype.create = function(author, bookname, success, error) {
 			function: "create"
 		},
 		dataType: "json",
-		succes: successFn(data),
-		error: errorFn(data)
+		success: function() {
+			successFn(arguments[0])
+		},
+		error: function() {
+			console.log(arguments);
+			errorFn(arguments)
+		}
 
 	})
 };
@@ -31,11 +36,12 @@ Book.prototype.delete = function(id, success, error) {
 			function: "delete"
 		},
 		dataType: "json",
-		succes: function(argument) {
-			console.log(argument);
+		success: function() {
+			successFn(arguments[0])
 		},
 		error: function() {
-			console.log("error");
+			console.log(arguments);
+			errorFn(arguments)
 		}
 
 	})
@@ -53,11 +59,12 @@ Book.prototype.read = function(id, success, error) {
 			function: "read"
 		},
 		dataType: "json",
-		succes: function(argument) {
-			console.log(argument);
+		success: function() {
+			successFn(arguments[0])
 		},
 		error: function() {
-			console.log("error");
+			console.log(arguments);
+			errorFn(arguments)
 		}
 
 	})
@@ -76,11 +83,12 @@ Book.prototype.update = function(author, bookname, id, success, error) {
 			function: "update"
 		},
 		dataType: "json",
-		succes: function(argument) {
-			console.log(argument);
+		success: function() {
+			successFn(arguments[0])
 		},
 		error: function() {
-			console.log("error");
+			console.log(arguments);
+			errorFn(arguments)
 		}
 
 	})
@@ -96,10 +104,11 @@ Book.prototype.getList = function(success, error) {
 			function: "readbooks"
 		},
 		dataType: "json",
-		succes: function() {
-			successFn(arguments)
+		success: function() {
+			successFn(arguments[0])
 		},
 		error: function() {
+			console.log(arguments);
 			errorFn(arguments)
 		}
 

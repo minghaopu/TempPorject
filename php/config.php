@@ -4,7 +4,7 @@
 	 */
 	define('DB_HOST', 'localhost'); 	// server name
 	define('DB_USER','root');			// server username
-	define('DB_PASSWORD','password'); 	// server password
+	define('DB_PASSWORD','0conceit'); 	// server password
 	define('DB_NAME','bookdb'); 		// dabase name
 	define('DB_CHARSET', 'utf8');	
 	define('DB_PORT', '3306');
