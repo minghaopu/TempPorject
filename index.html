@@ -1,7 +1,58 @@
 <!DOCTYPE html>
 <html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="lib/jquery-3.1.0.js"></script>
+	<script src="js/book.js"></script>
+	<script src="js/script.js"></script>
+</head>
 <body>
-<script src="lib/jquery-3.1.0.js"></script>
-<script src="js/book.js"></script>
+<div>
+	<p class="header">Create</p>
+	<p class="label">author</p>
+	<input type="text" name="author" id="c_author">
+	<p class="label">bookname</p>
+	<input type="text" name="bookname" id="c_bookname">
+	<button type="button" id="create">create</button>
+</div>
+
+<div>
+	<p class="header">Update</p>
+	<p class="label">author</p>
+	<input type="text" name="author" id="u_author">
+	<p class="label">bookname</p>
+	<input type="text" name="bookname" id="u_bookname">
+	<button type="button" id="update">update</button>
+</div>
+
+
+<div>
+	<p class="header">Read</p>
+	<p class="label">id</p>
+	<input type="text" name="id" id="r_id">
+	<p class="label">author</p>
+	<input type="text" readonly="true" name="author" id="r_author">
+	<p class="label">bookname</p>
+	<input type="text" readonly="true" name="bookname" id="r_bookname">
+	<button type="button" id="read">read</button>
+</div>
+
+<div>
+	<p class="header">Delete</p>
+	<p class="label">id</p>
+	<input type="text" name="id" id="d_id">
+	<button type="button" id="delete">delete</button>
+</div>
+
+
+<div id="list">
+	<div id="list-content">
+		
+	</div>
+	<button type="button" id="getList">get books</button>
+</div>
+
+
+
 </body>
 </html>
